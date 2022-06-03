@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html class="zc-html" lang="fa" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <title>ZingSoft Demo</title>
+    <link rel="stylesheet" href="./css/bootstrap.rtl.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <script src="./js/bootstrap.bundle.js"></script>
+    <script
+      nonce="undefined"
+      src="https://cdn.zingchart.com/zingchart.min.js"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body class="zc-body">
+    <!-- CHART CONTAINER -->
+    <div class="row mt-2 justify-content-center">
+      <div class="col-auto">
+        <input
+          type="number"
+          id="RoudInput"
+          value="5"
+          style="width: 90px"
+          class="form-control mt-2"
+        />
+      </div>
+      <div class="col-auto mt-2">
+        <button class="btn btn-info" onclick="Calculate()">محاسبه</button>
+      </div>
+      <div class="col-auto mt-3">
+        <span>شیوه رسم</span>
+      </div>
+      <div class="col-auto">
+        <select id="tree-aspect" class="form-control">
+          <option value="tree-right" selected>چپ به راست</option>
+          <option value="tree-left">راست به چپ</option>
+          <option value="tree-up">پایین به بالا</option>
+          <option value="tree-down">بالا به پایین</option>
+        </select>
+      </div>
+      <div class="col-auto mt-3">
+        <span>شکل یال ها</span>
+      </div>
+      <div class="col-auto">
+        <select id="tree-node" class="form-control">
+          <option value="arc" selected>قوس</option>
+          <option value="line">خط</option>
+          <option value="side-before">کنار پایین</option>
+          <option value="side-after">کنار بالا</option>
+          <option value="side-between">کنار مابین</option>
+          <option value="split">تقسیم شده</option>
+        </select>
+      </div>
+    </div>
+    <div id="myChart" class="chart--container"></div>
+
+    <div class="row px-4 mt-2 justify-content-center">
+      <div class="card" style="width: 400px">
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr class="text-center">
+                  <th scope="col">ماه</th>
+                  <th scope="col">بزرگ سالان</th>
+                  <th scope="col">خرد سالان</th>
+                  <th scope="col">کل</th>
+                </tr>
+              </thead>
+              <tbody id="tableBody" class="text-center"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row px-4 mt-2">
+      <div class="col d-flex justify-content-center">
+        <div class="card" style="width: fit-content">
+          <div class="card-body text-center">
+            <h3>ساخته شده توسط</h3>
+            <h3>آرمین اسماعیلی ملک و حسین آسیابی خوشطلب</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>
